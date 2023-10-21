@@ -1,0 +1,146 @@
+body {
+    position: relative;
+    margin: 0;
+    width: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    padding: 150px 150px 200px 150px;
+    display: grid;
+    grid-template-areas: 'card1 card1 card2 card3' 'card4 card5 card5 card3';
+    gap: 1.5rem;
+    height: 100%;
+    background: rgb(240, 237, 243);
+}
+
+#card-1 {
+    background: blueviolet;
+    grid-area: card1;
+}
+
+#card-2 {
+    background: rgb(48, 46, 51);
+    grid-area: card2;
+}
+
+#card-3 {
+    grid-area: card3;
+    color: black;
+    background: white;
+}
+
+#card-3 .card-body .card-desscription,
+#card-4 .card-body .card-desscription {
+    color: black;
+    line-height: 1.2;
+}
+
+#card-3 .card-body .card-title,
+#card-4 .card-body .card-title {
+    color: black;
+    line-height: 1.2;
+}
+
+#card-4 {
+    grid-area: card4;
+    background: white;
+}
+
+#card-5 {
+    grid-area: card5;
+    background: rgb(43, 42, 44);
+}
+
+.testmonial-card {
+    padding: 2rem 2rem 2rem 2rem;
+    max-height: 100%;
+    border-radius: 0.5rem;
+}
+
+.card-header {
+    display: flex;
+    padding: 0 0 1rem 0;
+    margin-bottom: 0;
+    width: 100%;
+}
+
+.card-header img {
+    flex: 1;
+    border-radius: 50%;
+    width: 1.8rem;
+    height: auto;
+    border: 2px solid rgb(219, 211, 211);
+}
+
+.card-header .card-header-title {
+    padding-left: 1rem;
+    align-self: center;
+    color: rgb(219, 211, 211);
+    padding-bottom: 0.5rem;
+}
+
+.card-header .card-header-title h2 {
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+.card-header .card-header-title p {
+    margin: 0;
+    font-size: 0.8rem;
+}
+
+.card-body .card-title {
+    color: white;
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 0;
+}
+
+.card-body .card-desscription {
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 0;
+    opacity: 0.6;
+    font-style: normal;
+}
+
+@media (min-width: 769px) and (max-width: 1020px) {
+    .container {
+        width: 100%;
+        padding: 10%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 'card1 card1 card5 card5' 'card2 card4 card3 card3';
+        gap: 0.5rem;
+        height: 100%;
+        background: rgb(188, 161, 214);
+    }
+}
+
+@media (max-width: 768px) or (min-height: 950px) {
+    .container {
+        width: 100%;
+        padding: 10%;
+        display: grid;
+        grid-template-areas: none;
+        grid-template-columns: 1fr;
+        grid-template-areas: 'card1' 'card3' 'card4' 'card5' 'card2';
+        gap: 0.5rem;
+        height: 100%;
+        background: rgb(188, 161, 214);
+    }
+}
+
+@media(min-width: 1020px) {
+    #card-3,
+    #card-2,
+    #card-4 {
+        max-width: 250px;
+    }
+}
